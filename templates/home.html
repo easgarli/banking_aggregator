@@ -1,12 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BankTap Home</title>
-</head>
-<body>
-    <h1>Welcome to BankTap</h1>
-    <p>Navigate to <a href="/loans/">Loans</a> to explore loan options.</p>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="hero">
+        <h1>Banking Aggregator</h1>
+        <div class="hero-content">
+        <h2>Welcome to our Banking Aggregator!</h2>
+        <p>
+            We are dedicated to helping you navigate the complex world of banking and loans in Azerbaijan.
+            Our platform offers a comprehensive solution for comparing loan products, learning about
+            different banks, and making informed decisions about your financial future. Whether you are
+            looking for a personal loan, a business loan, or just want to understand your options better,
+            we are here to guide you every step of the way.
+        </p>
+        <a href="/loans/" class="btn">Explore Loans</a>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+

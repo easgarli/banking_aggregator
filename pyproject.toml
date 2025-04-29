@@ -8,4 +8,5 @@ dependencies = [
     "Django>=4.0",
     "pillow>=11.2.1",
     "ruff>=0.11.7",
+    "tzdata>=2025.2",
 ]

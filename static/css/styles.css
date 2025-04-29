@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: linear-gradient(to right, #007bff, #0056b3); /* Blue gradient */
+    color: #fff;
+    overflow: hidden;
+    position: fixed; /* Fixed position at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensure it's above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.navbar ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline;
+    padding: 0 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #a0d6ff; /* Lighter blue on hover */
+}
+
+/* Header */
+header {
+    padding-top: 60px; /* Adjust for navbar height */
+    text-align: center;
+    background: white;
+    color: #333;
+}
+
+/* Main Heading */
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #0056b3; /* Darker blue */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Sub-heading */
+h2 {
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+/* Introduction Text */
+.intro {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: #007bff; /* Blue hover */
+}
+
