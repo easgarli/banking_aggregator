@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    {% include 'base.html' %}
+
+    <div class="container">
+        <h1>Profil Məlumatları</h1>
+        <div class="profile-info">
+            <h2>{{ user.username }}</h2>
+            <p>Email: {{ user.email }}</p>
+            <p>Qeydiyyat Tarixi: {{ user.date_joined }}</p>
+        </div>
+
+        <h3>Loan Applications</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Loan Type</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Application Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for application in loan_applications %}
+                <tr>
+                    <td>{{ application.loan_type }}</td>
+                    <td>{{ application.amount }}</td>
+                    <td>{{ application.status }}</td>
+                    <td>{{ application.application_date }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">Heç bir müraciət yoxdur.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{% url 'edit_profile' %}" class="btn">Profilinizi Düzəldin</a>
+    </div>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

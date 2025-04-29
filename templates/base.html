@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Banking Aggregator{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Banking Aggregator</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'loan_comparison' %}">Compare Loans</a></li>
+                <li><a href="{% url 'bank_directory' %}">Bank Directory</a></li>
+                <li><a href="{% url 'user_profile' %}">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; {{ current_year }} Banking Aggregator. All rights reserved.</p>
+    </footer>
+    
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

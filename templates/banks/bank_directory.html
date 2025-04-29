@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Directory</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    {% include 'base.html' %}
+
+    <div class="container">
+        <h1>Bank Directory</h1>
+        <p>Find and compare loans from various banks in Azerbaijan.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Bank Name</th>
+                    <th>Logo</th>
+                    <th>Loan Products</th>
+                    <th>More Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for bank in banks %}
+                <tr>
+                    <td>{{ bank.name }}</td>
+                    <td><img src="{{ bank.logo.url }}" alt="{{ bank.name }} Logo" width="100"></td>
+                    <td>
+                        <ul>
+                            {% for product in bank.loan_products %}
+                            <li>{{ product.name }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td><a href="{% url 'bank_detail' bank.id %}">View Details</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
